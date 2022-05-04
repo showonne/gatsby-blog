@@ -1,0 +1,13 @@
+---
+title: "Gatsby入门"
+date: "2022-05-01"
+---
+
+之前用hexo写博客，最近想改改博客主题，一看到ejs整个人都不好了，现在写页面确实是不用框架，没有完备的工具链就浑身难受，正好假期闲着没事，了解
+一下Gatsby的玩法
+
+Gatsby 中有一些东西是基于约定式的，比如路由，和前端框架 `ice` 和 `umi` 中的路由很像，还有一些全局的文件，比如 `gatsby-browser.js`, `gatsby-node.js`等，熟悉了这些约定后，开发起来就会非常得心应手
+
+Gatsby 内置了两个 React 组件，一个是 Link，一个是 Image，Link 封装了 preload 的逻辑，使用 Link 组件做站内跳转，可以提升页面加载效率，此外 Link 还提供了一些控制样式的 props，可以做一些 active 状态的样式判断，Image 组件分为 静态图片和动态图片，封装了 lazyLoad 方案，提升图片加载性能。通过这两个内置组件可以看出 Gatsby 对极致性能的追求，也能保证只要用户遵守规则，开发出的页面性能都不会太糟糕
+
+排在 Gatsby 插件榜前几的插件分别是 `source-filesystem`, `Contentful`, `gatsby-plugin-image`, `plugin-sharp`, `React Helmet`，`MDX` 等...可见很多用户都在用 Gatsby 搭建静态站点，个人博客。无论是写文章还是改页面，修改好后直接提交代码，Gatsby cloud 会自动发起构建任务，每次构建后还有性能，可访问性和最佳实践的打分（基于lighthouse），给用户明确的优化方向。Gatsby cloud 的免费方案不能并发多个构建任务，只允许一个自定义域名，每月100G的带宽，这些对个人来说应该完全没影响，如果实在是不够用，也可以迁移到 gh-pages 服务，配合 github actions 做到一键 push 代码，自动构建并发布

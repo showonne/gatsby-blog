@@ -4,11 +4,14 @@ import { Link } from 'gatsby';
 import slugify from '@sindresorhus/slugify';
 
 import * as styles from './index.module.less';
-import Layout from '../../layout';
+import Layout from '../../components/layout';
 
 export const query = graphql`
   {
-    allMdx {
+    allMdx (
+      sort: {order: DESC, fields: frontmatter___date}
+    )
+    {
       nodes {
         frontmatter {
           date,
@@ -21,7 +24,6 @@ export const query = graphql`
 `
 
 function Archives({data}) {
-  console.log(data)
   const { allMdx } = data
   const { nodes } = allMdx
 

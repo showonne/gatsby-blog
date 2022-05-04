@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "../components/Icon"
-import Layout from "../layout"
+import Layout from "../components/layout"
 
 import * as styles from './index.module.less'
 

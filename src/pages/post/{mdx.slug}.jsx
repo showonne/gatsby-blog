@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Layout from '../../layout';
+import Layout from '../../components/layout';
 import './index.less';
 
 function Post({data}) {

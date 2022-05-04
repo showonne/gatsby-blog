@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import Layout from '../../layout';
+import Layout from '../../components/layout';
 import * as styles from './index.module.less';
 
 const dataSource = {
@@ -22,10 +22,6 @@ const dataSource = {
 
 function Links() {
   const [source, setSource] = useState({})
-
-  const tabs = useMemo(() => {
-    return Object.keys(source)
-  }, [source])
 
   useEffect(() => {
     const tags = Object.keys(dataSource)

@@ -9,14 +9,10 @@ module.exports = {
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.js
     siteTitle: `Showonne`,
     siteTitleAlt: `Showonne's blog`,
-    siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://cara.lekoarts.de`,
-    siteDescription: ``,
-    siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
-    author: `@showonne`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-less`,
     {
       resolve: 'gatsby-source-filesystem',
