@@ -5,7 +5,7 @@ import * as styles from './index.module.less';
 
 function Header() {
   return (
-    <div className={styles.pageHeader} style={{position: 'fixed', width: '100%', top: 0}}>
+    <div className={styles.pageHeader}>
       <Link to="/">
         Index
       </Link>
