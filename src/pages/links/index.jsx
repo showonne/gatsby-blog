@@ -44,7 +44,11 @@ function Links() {
           {
             source['全部']?.map((item, index) => (
               <div key={index}>
-                <a className={styles.linkItem} href={item[1]} target="_blank">{item[0]}</a>
+                <a className={styles.linkItem} href={item[1]} target="_blank">
+                  <span>
+                    {item[0]}
+                  </span>
+                </a>
               </div>
             ))
           }
